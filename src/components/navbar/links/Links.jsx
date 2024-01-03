@@ -1,4 +1,5 @@
 import Link from "next/link";
+import styles from "./links.module.css";
 
 export default function Links() {
   const links = [
@@ -20,7 +21,7 @@ export default function Links() {
     },
   ];
   return (
-    <div>
+    <div className={styles.link}>
       {links.map((link) => (
         <Link key={link.title} href={link.path}>
           {link.title}
